@@ -1,0 +1,13 @@
+/coverage
+/demo/dist
+dist/
+lib/
+node_modules/
+*.log
+.idea
+packages/site/build
+package-lock.json
+.DS_Store
+.cache
+public/
+yarn.lock

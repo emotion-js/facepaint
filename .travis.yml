@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "8"
+
+script: yarn test
+
+install: yarn
+
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov/bin/codecov
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
