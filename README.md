@@ -15,6 +15,8 @@ const mq = facepaint([
 ])
 
 const myClassName = css(mq({
+  backgroundColor: 'hotpink',
+  textAlign: 'center',
   width: ['25%', '50%', '75%', '100%'],
   '& .foo': {
     color: ['red', 'green', 'blue', 'darkorchid'],
@@ -30,68 +32,70 @@ const myClassName = css(mq({
 **The following css is generated.**
 
 ```css
-.css-1ohjc6h {
+.css-rbuh8g {
+  background-color: hotpink;
+  text-align: center;
   width: 25%;
 }
 
 @media (min-width:420px) {
-  .css-1ohjc6h {
+  .css-rbuh8g {
     width: 50%;
   }
 }
 
 @media (min-width:920px) {
-  .css-1ohjc6h {
+  .css-rbuh8g {
     width: 75%;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1ohjc6h {
+  .css-rbuh8g {
     width: 100%;
   }
 }
 
-.css-1ohjc6h .foo {
+.css-rbuh8g .foo {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-1ohjc6h .foo {
+  .css-rbuh8g .foo {
     color: green;
   }
 }
 
 @media (min-width:920px) {
-  .css-1ohjc6h .foo {
+  .css-rbuh8g .foo {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1ohjc6h .foo {
+  .css-rbuh8g .foo {
     color: darkorchid;
   }
 }
 
-.css-1ohjc6h .foo img {
+.css-rbuh8g .foo img {
   height: 10px;
 }
 
 @media (min-width:420px) {
-  .css-1ohjc6h .foo img {
+  .css-rbuh8g .foo img {
     height: 15px;
   }
 }
 
 @media (min-width:920px) {
-  .css-1ohjc6h .foo img {
+  .css-rbuh8g .foo img {
     height: 20px;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1ohjc6h .foo img {
+  .css-rbuh8g .foo img {
     height: 25px;
   }
 }

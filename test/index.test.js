@@ -46,6 +46,8 @@ describe('facepaint', () => {
   test('nested', () => {
     const result = css(
       mq({
+        backgroundColor: 'hotpink',
+        textAlign: 'center',
         width: ['25%', '50%', '75%', '100%'],
         '& .foo': {
           color: ['red', 'green', 'blue', 'darkorchid'],
