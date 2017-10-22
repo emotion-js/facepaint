@@ -8,13 +8,13 @@
 import { css } from 'emotion'
 import facepaint from 'facepaint'
 
-const mq = facepaint(css, [
+const mq = facepaint([
   '@media(min-width: 420px)',
   '@media(min-width: 920px)',
   '@media(min-width: 1120px)'
 ])
 
-const myClassName = mq({
+const myClassName = css(mq({
   width: ['25%', '50%', '75%', '100%'],
   '& .foo': {
     color: ['red', 'green', 'blue', 'darkorchid'],
@@ -22,7 +22,7 @@ const myClassName = mq({
       height: [10, 15, 20, 25]
     }
   }
-})
+}))
 ```
 
 **Note that the first value is considered a default value and is not a child of a media query at-rule.**

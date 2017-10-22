@@ -4,7 +4,7 @@ import { css, sheet, flush } from 'emotion'
 
 import facepaint from '../src/index'
 
-const mq = facepaint(css, [
+const mq = facepaint([
   '@media(min-width: 420px)',
   '@media(min-width: 920px)',
   '@media(min-width: 1120px)'
@@ -13,7 +13,7 @@ const mq = facepaint(css, [
 describe('facepaint', () => {
   afterEach(() => flush())
   test('basic', () => {
-    const result = mq({ color: ['red', 'green', 'blue', 'darkorchid'] })
+    const result = css(mq({ color: ['red', 'green', 'blue', 'darkorchid'] }))
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
@@ -21,12 +21,14 @@ describe('facepaint', () => {
   })
 
   test('multiple', () => {
-    const result = mq({
-      color: ['red', 'green', 'blue', 'darkorchid'],
-      display: ['flex', 'block', 'inline-block', 'table'],
-      fontSize: 12,
-      alignItems: 'center'
-    })
+    const result = css(
+      mq({
+        color: ['red', 'green', 'blue', 'darkorchid'],
+        display: ['flex', 'block', 'inline-block', 'table'],
+        fontSize: 12,
+        alignItems: 'center'
+      })
+    )
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>multiple</div>).toJSON()
     expect(tree).toMatchSnapshot()
@@ -34,15 +36,17 @@ describe('facepaint', () => {
   })
 
   test('nested', () => {
-    const result = mq({
-      width: ['25%', '50%', '75%', '100%'],
-      '& .foo': {
-        color: ['red', 'green', 'blue', 'darkorchid'],
-        '& img': {
-          height: [10, 15, 20, 25]
+    const result = css(
+      mq({
+        width: ['25%', '50%', '75%', '100%'],
+        '& .foo': {
+          color: ['red', 'green', 'blue', 'darkorchid'],
+          '& img': {
+            height: [10, 15, 20, 25]
+          }
         }
-      }
-    })
+      })
+    )
     expect(result).toMatchSnapshot()
     const tree = renderer
       .create(
