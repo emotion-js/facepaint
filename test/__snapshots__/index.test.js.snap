@@ -56,6 +56,50 @@ exports[`facepaint basic 3`] = `
 }"
 `;
 
+exports[`facepaint holes 1`] = `"css-196uzh"`;
+
+exports[`facepaint holes 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint holes 3`] = `
+".css-196uzh {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .css-196uzh {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .css-196uzh {
+    color: darkorchid;
+  }
+}"
+`;
+
 exports[`facepaint multiple 1`] = `"css-egce6e"`;
 
 exports[`facepaint multiple 2`] = `
