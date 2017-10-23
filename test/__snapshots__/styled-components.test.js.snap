@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`facepaint basic 1`] = `
+.c0 {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .c0 {
+    color: green;
+  }
+}
+
+@media (min-width:920px) {
+  .c0 {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="c0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint holes 1`] = `
+.c0 {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .c0 {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="c0"
+>
+  Holes
+</div>
+`;
+
+exports[`facepaint multiple 1`] = `
+.c0 {
+  color: red;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:420px) {
+  .c0 {
+    color: green;
+    display: block;
+  }
+}
+
+@media (min-width:920px) {
+  .c0 {
+    color: blue;
+    display: inline-block;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 {
+    color: darkorchid;
+    display: table;
+  }
+}
+
+<div
+  className="c0"
+>
+  Multiple
+</div>
+`;
+
+exports[`facepaint nested 1`] = `
+.c0 {
+  background-color: hotpink;
+  text-align: center;
+  width: 25%;
+}
+
+.c0 .foo {
+  color: red;
+}
+
+.c0 .foo img {
+  height: 10px;
+}
+
+@media (min-width:420px) {
+  .c0 {
+    width: 50%;
+  }
+}
+
+@media (min-width:920px) {
+  .c0 {
+    width: 75%;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media (min-width:420px) {
+  .c0 .foo {
+    color: green;
+  }
+}
+
+@media (min-width:920px) {
+  .c0 .foo {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 .foo {
+    color: darkorchid;
+  }
+}
+
+@media (min-width:420px) {
+  .c0 .foo img {
+    height: 15px;
+  }
+}
+
+@media (min-width:920px) {
+  .c0 .foo img {
+    height: 20px;
+  }
+}
+
+@media (min-width:1120px) {
+  .c0 .foo img {
+    height: 25px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="foo"
+  >
+    foo
+  </div>
+  nested
+</div>
+`;

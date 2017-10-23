@@ -2,7 +2,11 @@
 
 ##### Responsive style values for css-in-js.
 
-## emotion example
+## Examples
+- [emotion](#emotion)
+- [styled-components](#styled-components)
+
+### emotion
 
 ```javascript
 import { css } from 'emotion'
@@ -101,7 +105,7 @@ const myClassName = css(mq({
 }
 ```
 
-## styled-components example
+### styled-components
 
 ```javascript
 import styled from 'styled-components'
@@ -119,7 +123,7 @@ const Div = styled('div')`
     textAlign: 'center',
     width: ['25%', '50%', '75%', '100%'],
     '& .foo': {
-      color: ['red', 'green', 'blue', 'darkorchid'],
+      color: ['red', 'green', 'blue', 'papayawhip'],
       '& img': {
         height: [10, 15, 20, 25]
       }
@@ -179,7 +183,7 @@ const Div = styled('div')`
 
 @media (min-width:1120px) {
   .c0 .foo {
-    color: darkorchid;
+    color: papayawhip;
   }
 }
 
