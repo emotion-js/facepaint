@@ -125,7 +125,7 @@ const Div = styled('div')`
     '& .foo': {
       color: ['red', 'green', 'blue', 'papayawhip'],
       '& img': {
-        height: [10, 15, 20, 25]
+        height: ['10px', '15px', '20px', '25px']
       }
     }
   })};
