@@ -38,7 +38,7 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
 ```
 
 **Arguments**
-* *breakpoints*
+* *selectors*
   ```javascript
   const mq = facepaint([
     '@media(min-width: 420px)',
