@@ -332,3 +332,120 @@ exports[`facepaint nested 3`] = `
   }
 }"
 `;
+
+exports[`facepaint pseudo 1`] = `"css-1guvnfu"`;
+
+exports[`facepaint pseudo 2`] = `
+.glamor-0 {
+  background-color: hotpink;
+  text-align: center;
+  width: 25%;
+}
+
+.glamor-0:hover {
+  width: 50%;
+}
+
+.glamor-0:active {
+  width: 75%;
+}
+
+.glamor-0:focus {
+  width: 100%;
+}
+
+.glamor-0 .foo {
+  color: red;
+}
+
+.glamor-0 .foo:hover {
+  color: green;
+}
+
+.glamor-0 .foo:active {
+  color: blue;
+}
+
+.glamor-0 .foo:focus {
+  color: darkorchid;
+}
+
+.glamor-0 .foo img {
+  height: 10px;
+}
+
+.glamor-0 .foo img:hover {
+  height: 15px;
+}
+
+.glamor-0 .foo img:active {
+  height: 20px;
+}
+
+.glamor-0 .foo img:focus {
+  height: 25px;
+}
+
+<div
+  className="glamor-0"
+>
+  <div
+    className="foo"
+  >
+    foo
+  </div>
+  function
+</div>
+`;
+
+exports[`facepaint pseudo 3`] = `
+".css-1guvnfu {
+  background-color: hotpink;
+  text-align: center;
+  width: 25%;
+}
+
+.css-1guvnfu:hover {
+  width: 50%;
+}
+
+.css-1guvnfu:active {
+  width: 75%;
+}
+
+.css-1guvnfu:focus {
+  width: 100%;
+}
+
+.css-1guvnfu .foo {
+  color: red;
+}
+
+.css-1guvnfu .foo:hover {
+  color: green;
+}
+
+.css-1guvnfu .foo:active {
+  color: blue;
+}
+
+.css-1guvnfu .foo:focus {
+  color: darkorchid;
+}
+
+.css-1guvnfu .foo img {
+  height: 10px;
+}
+
+.css-1guvnfu .foo img:hover {
+  height: 15px;
+}
+
+.css-1guvnfu .foo img:active {
+  height: 20px;
+}
+
+.css-1guvnfu .foo img:focus {
+  height: 25px;
+}"
+`;

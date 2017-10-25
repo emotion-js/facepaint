@@ -5,6 +5,7 @@
 ## Examples
 - [emotion](#emotion)
 - [styled-components](#styled-components)
+- [pseudo selectors](#pseudo-selectors)
 
 ### emotion
 
@@ -205,5 +206,83 @@ const Div = styled('div')`
   .c0 .foo img {
     height: 25px;
   }
+}
+```
+
+## Pseudo Selectors
+
+**[CodeSandbox Demo](https://codesandbox.io/s/j5q3m3qy5)**
+
+```javascript
+import { css } from 'emotion'
+import facepaint from 'facepaint'
+
+const pseudo = facepaint([':hover', ':active', ':focus'])
+
+const myClassName = css(
+  pseudo({
+    backgroundColor: 'hotpink',
+    textAlign: 'center',
+    width: ['25%', '50%', '75%', '100%'],
+    '& .foo': {
+      color: ['red', 'green', 'blue', 'darkorchid'],
+      '& img': {
+        height: [10, 15, 20, 25]
+      }
+    }
+  })
+)
+```
+
+
+```css
+.css-1guvnfu {
+  background-color: hotpink;
+  text-align: center;
+  width: 25%;
+}
+
+.css-1guvnfu:hover {
+  width: 50%;
+}
+
+.css-1guvnfu:active {
+  width: 75%;
+}
+
+.css-1guvnfu:focus {
+  width: 100%;
+}
+
+.css-1guvnfu .foo {
+  color: red;
+}
+
+.css-1guvnfu .foo:hover {
+  color: green;
+}
+
+.css-1guvnfu .foo:active {
+  color: blue;
+}
+
+.css-1guvnfu .foo:focus {
+  color: darkorchid;
+}
+
+.css-1guvnfu .foo img {
+  height: 10px;
+}
+
+.css-1guvnfu .foo img:hover {
+  height: 15px;
+}
+
+.css-1guvnfu .foo img:active {
+  height: 20px;
+}
+
+.css-1guvnfu .foo img:focus {
+  height: 25px;
 }
 ```

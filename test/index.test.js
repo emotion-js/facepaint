@@ -10,6 +10,8 @@ const mq = facepaint([
   '@media(min-width: 1120px)'
 ])
 
+const pseudo = facepaint([':hover', ':active', ':focus'])
+
 describe('facepaint', () => {
   afterEach(() => flush())
   test('basic', () => {
@@ -46,6 +48,33 @@ describe('facepaint', () => {
   test('nested', () => {
     const result = css(
       mq({
+        backgroundColor: 'hotpink',
+        textAlign: 'center',
+        width: ['25%', '50%', '75%', '100%'],
+        '& .foo': {
+          color: ['red', 'green', 'blue', 'darkorchid'],
+          '& img': {
+            height: [10, 15, 20, 25]
+          }
+        }
+      })
+    )
+    expect(result).toMatchSnapshot()
+    const tree = renderer
+      .create(
+        <div css={result}>
+          <div className="foo">foo</div>
+          function
+        </div>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('pseudo', () => {
+    const result = css(
+      pseudo({
         backgroundColor: 'hotpink',
         textAlign: 'center',
         width: ['25%', '50%', '75%', '100%'],
