@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`facepaint array values with selectors 1`] = `"css-1ot4erq"`;
+
+exports[`facepaint array values with selectors 2`] = `
+.glamor-0 .current-index {
+  color: blue;
+  margin-right: 15px;
+  display: none;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+@media (min-width:420px) {
+  .glamor-0 .current-index {
+    color: red;
+  }
+}
+
+@media (min-width:420px) {
+  .glamor-0 .current-index {
+    display: block;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  <div
+    className="foo"
+  >
+    foo
+  </div>
+  function
+</div>
+`;
+
+exports[`facepaint array values with selectors 3`] = `
+".css-1ot4erq .current-index {
+  color: blue;
+  margin-right: 15px;
+  display: none;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+@media (min-width:420px) {
+  .css-1ot4erq .current-index {
+    color: red;
+  }
+}
+
+@media (min-width:420px) {
+  .css-1ot4erq .current-index {
+    display: block;
+  }
+}"
+`;
+
 exports[`facepaint basic 1`] = `"css-xee1ha"`;
 
 exports[`facepaint basic 2`] = `

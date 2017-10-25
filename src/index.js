@@ -7,7 +7,9 @@ export default function(breakpoints, { overlap } = {}) {
     }
 
     return Object.keys(obj).reduce((slots, key) => {
-      if (Array.isArray(obj[key])) {
+      // Check if value is an array, but skip if it looks like a selector.
+      // key.indexOf('&') === 0
+      if (Array.isArray(obj[key]) && key.charCodeAt(0) !== 38) {
         let prior
         obj[key].forEach((v, index) => {
           // Optimize by removing duplicated media query entries

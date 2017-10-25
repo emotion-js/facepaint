@@ -129,4 +129,32 @@ describe('facepaint', () => {
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
+
+  test('array values with selectors', () => {
+    const result = css(
+      mq({
+        '& .current-index': [
+          {
+            color: ['blue', 'red']
+          },
+          {
+            marginRight: 15,
+            display: ['none', 'block'],
+            letterSpacing: 3
+          }
+        ]
+      })
+    )
+    expect(result).toMatchSnapshot()
+    const tree = renderer
+      .create(
+        <div css={result}>
+          <div className="foo">foo</div>
+          function
+        </div>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
 })
