@@ -9,7 +9,7 @@ const mq = facepaint([
   '@media(min-width: 920px)',
   '@media(min-width: 1120px)',
   '@media(min-width: 11200px)'
-], true)
+], { overlap: true })
 
 const pseudo = facepaint([':hover', ':active', ':focus'])
 

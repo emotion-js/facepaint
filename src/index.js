@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-export default function(breakpoints, overlap) {
+export default function(breakpoints, { overlap } = {}) {
   const mq = [''].concat(breakpoints)
   function flatten(obj) {
     if (Array.isArray(obj)) {
