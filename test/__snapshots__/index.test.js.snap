@@ -449,3 +449,99 @@ exports[`facepaint pseudo 3`] = `
   height: 25px;
 }"
 `;
+
+exports[`facepaint repeating 1`] = `"css-191b4cw"`;
+
+exports[`facepaint repeating 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:11200px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint repeating 3`] = `
+".css-191b4cw {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .css-191b4cw {
+    color: blue;
+  }
+}
+
+@media (min-width:920px) {
+
+}
+
+@media (min-width:11200px) {
+  .css-191b4cw {
+    color: darkorchid;
+  }
+}"
+`;
+
+exports[`facepaint undefined 1`] = `"css-1rmds2t"`;
+
+exports[`facepaint undefined 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint undefined 3`] = `
+".css-1rmds2t {
+  color: red;
+}
+
+@media (min-width:420px) {
+
+}
+
+@media (min-width:920px) {
+  .css-1rmds2t {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .css-1rmds2t {
+    color: darkorchid;
+  }
+}"
+`;
