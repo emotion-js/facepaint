@@ -54,8 +54,10 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
     { overlap: true|false }
   )
   ```
-  - overlap `boolean`: remove any duplicate values found in multiple "slots"
-  
+  - overlap `boolean` (Default: `false`) - remove any duplicate values found in multiple "slots"
+
+**Returns**
+
 `facepaint` returns a function that can be exported and used throughout
 your app to dynamically style based on your provided selectors. 
 
