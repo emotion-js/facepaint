@@ -14,9 +14,15 @@ export default function(breakpoints, overlap) {
           // when they are explicitly known to overlap.
           if (overlap && prior === v) {
             return
-          } else if (v != null) {
-            prior = v
           }
+
+          if (v == null) {
+            // Do not create entries for undefined values as this will
+            // generate empty media media quries
+            return
+          }
+
+          prior = v
 
           if (index === 0) {
             slots[key] = v

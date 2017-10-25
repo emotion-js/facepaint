@@ -450,7 +450,7 @@ exports[`facepaint pseudo 3`] = `
 }"
 `;
 
-exports[`facepaint repeating 1`] = `"css-191b4cw"`;
+exports[`facepaint repeating 1`] = `"css-nhhz1q"`;
 
 exports[`facepaint repeating 2`] = `
 .glamor-0 {
@@ -477,28 +477,24 @@ exports[`facepaint repeating 2`] = `
 `;
 
 exports[`facepaint repeating 3`] = `
-".css-191b4cw {
+".css-nhhz1q {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-191b4cw {
+  .css-nhhz1q {
     color: blue;
   }
 }
 
-@media (min-width:920px) {
-
-}
-
 @media (min-width:11200px) {
-  .css-191b4cw {
+  .css-nhhz1q {
     color: darkorchid;
   }
 }"
 `;
 
-exports[`facepaint undefined 1`] = `"css-1rmds2t"`;
+exports[`facepaint undefined 1`] = `"css-196uzh"`;
 
 exports[`facepaint undefined 2`] = `
 .glamor-0 {
@@ -525,22 +521,18 @@ exports[`facepaint undefined 2`] = `
 `;
 
 exports[`facepaint undefined 3`] = `
-".css-1rmds2t {
+".css-196uzh {
   color: red;
 }
 
-@media (min-width:420px) {
-
-}
-
 @media (min-width:920px) {
-  .css-1rmds2t {
+  .css-196uzh {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1rmds2t {
+  .css-196uzh {
     color: darkorchid;
   }
 }"
