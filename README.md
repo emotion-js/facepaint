@@ -1,6 +1,64 @@
 # facepaint
 
-##### Responsive style values for css-in-js.
+#### Dynamic style values for css-in-js.
+
+```javascript
+import { css } from 'emotion'
+import facepaint from 'facepaint'
+
+const mq = facepaint([
+  '@media(min-width: 420px)',
+  '@media(min-width: 920px)',
+  '@media(min-width: 1120px)'
+])
+
+const myClassName = css(mq({
+  color: ['red', 'green', 'blue', 'darkorchid'],
+}))
+```
+
+## Install
+
+```bash
+npm i facepaint -S
+```
+
+**or**
+
+```bash
+yarn add facepaint
+```
+
+## API
+
+#### facepaint `function` 
+
+```javascript
+facepaint(selectors: Array<Selector>) : DynamicStyleFunction
+```
+
+**Arguments**
+* *breakpoints*
+  ```javascript
+  const mq = facepaint([
+    '@media(min-width: 420px)',
+    '@media(min-width: 920px)',
+    '@media(min-width: 1120px)'
+  ])
+  ```
+  
+* *options*
+  ```javascript
+  const mq = facepaint(
+    [...], 
+    { overlap: true|false }
+  )
+  ```
+  - overlap `boolean`: remove any duplicate values found in multiple "slots"
+  
+`facepaint` returns a function that can be exported and used throughout
+your app to dynamically style based on your provided selectors. 
+
 
 ## Examples
 - [emotion](#emotion)
