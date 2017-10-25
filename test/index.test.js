@@ -1,14 +1,19 @@
+/* eslint-disable no-sparse-arrays */
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { css, sheet, flush } from 'emotion'
 
 import facepaint from '../src/index'
 
-const mq = facepaint([
-  '@media(min-width: 420px)',
-  '@media(min-width: 920px)',
-  '@media(min-width: 1120px)'
-])
+const mq = facepaint(
+  [
+    '@media(min-width: 420px)',
+    '@media(min-width: 920px)',
+    '@media(min-width: 1120px)',
+    '@media(min-width: 11200px)'
+  ],
+  { overlap: true }
+)
 
 const pseudo = facepaint([':hover', ':active', ':focus'])
 
@@ -24,6 +29,32 @@ describe('facepaint', () => {
 
   test('holes', () => {
     const result = css(mq({ color: ['red', , 'blue', 'darkorchid'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('undefined', () => {
+    const result = css(mq({ color: ['red', undefined, 'blue', 'darkorchid'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('repeating', () => {
+    const result = css(
+      mq({ color: ['red', 'blue', undefined, 'blue', 'darkorchid'] })
+    )
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('nested arrays', () => {
+    const result = css(mq([[[[{ color: ['red', 'blue', 'darkorchid'] }]]]]))
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()

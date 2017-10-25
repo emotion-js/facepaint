@@ -333,6 +333,50 @@ exports[`facepaint nested 3`] = `
 }"
 `;
 
+exports[`facepaint nested arrays 1`] = `"css-1faqh3h"`;
+
+exports[`facepaint nested arrays 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint nested arrays 3`] = `
+".css-1faqh3h {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .css-1faqh3h {
+    color: blue;
+  }
+}
+
+@media (min-width:920px) {
+  .css-1faqh3h {
+    color: darkorchid;
+  }
+}"
+`;
+
 exports[`facepaint pseudo 1`] = `"css-1guvnfu"`;
 
 exports[`facepaint pseudo 2`] = `
@@ -447,5 +491,93 @@ exports[`facepaint pseudo 3`] = `
 
 .css-1guvnfu .foo img:focus {
   height: 25px;
+}"
+`;
+
+exports[`facepaint repeating 1`] = `"css-nhhz1q"`;
+
+exports[`facepaint repeating 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:11200px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint repeating 3`] = `
+".css-nhhz1q {
+  color: red;
+}
+
+@media (min-width:420px) {
+  .css-nhhz1q {
+    color: blue;
+  }
+}
+
+@media (min-width:11200px) {
+  .css-nhhz1q {
+    color: darkorchid;
+  }
+}"
+`;
+
+exports[`facepaint undefined 1`] = `"css-196uzh"`;
+
+exports[`facepaint undefined 2`] = `
+.glamor-0 {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .glamor-0 {
+    color: darkorchid;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  Basic
+</div>
+`;
+
+exports[`facepaint undefined 3`] = `
+".css-196uzh {
+  color: red;
+}
+
+@media (min-width:920px) {
+  .css-196uzh {
+    color: blue;
+  }
+}
+
+@media (min-width:1120px) {
+  .css-196uzh {
+    color: darkorchid;
+  }
 }"
 `;
