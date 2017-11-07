@@ -38,7 +38,7 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
 ```
 
 **Arguments**
-* *selectors*
+* *breakpoints*
   ```javascript
   const mq = facepaint([
     '@media(min-width: 420px)',
@@ -60,6 +60,10 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
 
 `facepaint` returns a function that can be exported and used throughout
 your app to dynamically style based on your provided selectors. 
+
+- The function accepts any number of arrays or objects as arguments.
+- Nested arrays are flattened. 
+- Boolean, `undefined`, and `null` values are ignored.
 
 
 ## Examples
