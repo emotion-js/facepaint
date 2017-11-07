@@ -2,6 +2,10 @@
 export default function(breakpoints, { overlap } = {}) {
   const mq = [''].concat(breakpoints)
   function flatten(obj) {
+    if (typeof obj !== 'object' || obj == null) {
+      return []
+    }
+
     if (Array.isArray(obj)) {
       return obj.map(flatten)
     }

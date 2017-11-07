@@ -117,6 +117,33 @@ exports[`facepaint basic 3`] = `
 }"
 `;
 
+exports[`facepaint boolean, null, and undefined values 1`] = `"css-dhb7kq"`;
+
+exports[`facepaint boolean, null, and undefined values 2`] = `
+.glamor-0 {
+  color: blue;
+  color: red;
+}
+
+<div
+  className="glamor-0"
+>
+  <div
+    className="foo"
+  >
+    foo
+  </div>
+  function
+</div>
+`;
+
+exports[`facepaint boolean, null, and undefined values 3`] = `
+".css-dhb7kq {
+  color: blue;
+  color: red;
+}"
+`;
+
 exports[`facepaint holes 1`] = `"css-196uzh"`;
 
 exports[`facepaint holes 2`] = `

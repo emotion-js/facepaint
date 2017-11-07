@@ -157,4 +157,36 @@ describe('facepaint', () => {
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
+
+  test('boolean, null, and undefined values', () => {
+    const result = css(
+      mq(
+        { color: 'blue' },
+        1 === 2 && { color: 'green' },
+        false,
+        true,
+        undefined,
+        null,
+        [
+          { color: 'red' },
+          1 === 2 && { color: 'green' },
+          false,
+          true,
+          undefined,
+          null
+        ]
+      )
+    )
+    expect(result).toMatchSnapshot()
+    const tree = renderer
+      .create(
+        <div css={result}>
+          <div className="foo">foo</div>
+          function
+        </div>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
 })
