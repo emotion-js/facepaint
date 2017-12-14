@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
-export default function(breakpoints, { overlap } = {}) {
-  const mq = [''].concat(breakpoints)
+export default function(breakpoints, { literal, overlap } = {}) {
+  const mq = literal ? breakpoints : [''].concat(breakpoints)
   function flatten(obj) {
     if (typeof obj !== 'object' || obj == null) {
       return []
@@ -13,9 +13,13 @@ export default function(breakpoints, { overlap } = {}) {
     return Object.keys(obj).reduce((slots, key) => {
       // Check if value is an array, but skip if it looks like a selector.
       // key.indexOf('&') === 0
-      if (Array.isArray(obj[key]) && key.charCodeAt(0) !== 38) {
+
+      let item = obj[key]
+      if (!Array.isArray(item) && literal) item = [item]
+
+      if ((literal || Array.isArray(item)) && key.charCodeAt(0) !== 38) {
         let prior
-        obj[key].forEach((v, index) => {
+        item.forEach((v, index) => {
           // Optimize by removing duplicated media query entries
           // when they are explicitly known to overlap.
           if (overlap && prior === v) {
@@ -30,7 +34,7 @@ export default function(breakpoints, { overlap } = {}) {
 
           prior = v
 
-          if (index === 0) {
+          if (index === 0 && !literal) {
             slots[key] = v
           } else if (!slots[mq[index]]) {
             slots[mq[index]] = { [key]: v }
@@ -38,10 +42,10 @@ export default function(breakpoints, { overlap } = {}) {
             slots[mq[index]][key] = v
           }
         })
-      } else if (typeof obj[key] === 'object') {
-        slots[key] = flatten(obj[key])
+      } else if (typeof item === 'object') {
+        slots[key] = flatten(item)
       } else {
-        slots[key] = obj[key]
+        slots[key] = item
       }
       return slots
     }, {})

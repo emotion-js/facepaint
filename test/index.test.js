@@ -15,6 +15,16 @@ const mq = facepaint(
   { overlap: true }
 )
 
+const mql = facepaint(
+  [
+    '@media(min-width: 420px)',
+    '@media(min-width: 920px)',
+    '@media(min-width: 1120px)',
+    '@media(min-width: 11200px)'
+  ],
+  { literal: true }
+)
+
 const pseudo = facepaint([':hover', ':active', ':focus'])
 
 describe('facepaint', () => {
@@ -186,6 +196,33 @@ describe('facepaint', () => {
         </div>
       )
       .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test.only('literal 1', () => {
+    const result = css(mql({ background: ['red'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test.only('literal 2', () => {
+    const result = css(mql({ background: ['red', 'green'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test.only('literal all', () => {
+    const result = css(mql({ background: ['red', 'green', 'blue', 'orange'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
