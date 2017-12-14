@@ -200,7 +200,7 @@ describe('facepaint', () => {
     expect(sheet).toMatchSnapshot()
   })
 
-  test.only('literal 1', () => {
+  test('literal 1', () => {
     const result = css(mql({ background: ['red'] }))
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>foo</div>).toJSON()
@@ -209,7 +209,7 @@ describe('facepaint', () => {
     expect(sheet).toMatchSnapshot()
   })
 
-  test.only('literal 2', () => {
+  test('literal 2', () => {
     const result = css(mql({ background: ['red', 'green'] }))
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>foo</div>).toJSON()
@@ -218,7 +218,7 @@ describe('facepaint', () => {
     expect(sheet).toMatchSnapshot()
   })
 
-  test.only('literal all', () => {
+  test('literal all', () => {
     const result = css(mql({ background: ['red', 'green', 'blue', 'orange'] }))
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>foo</div>).toJSON()
