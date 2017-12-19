@@ -150,6 +150,76 @@ exports[`facepaint boolean, null, and undefined values 2`] = `
 }"
 `;
 
+exports[`facepaint composition 1`] = `
+.glamor-0 {
+  background: orange;
+}
+
+.glamor-0 {
+  background: green;
+}
+
+.glamor-0 {
+  background: orange;
+}
+
+.glamor-0 {
+  background: orange;
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    background: blue;
+  }
+}
+
+<div
+  className="glamor-0"
+/>
+`;
+
+exports[`facepaint composition 2`] = `
+".css-1nun30 {
+  background: green;
+}
+
+@media (min-width:420px) {
+  .css-1nun30 {
+    background: blue;
+  }
+}
+
+.css-1y2rzxt {
+  background: orange;
+}
+
+.css-128fsyx {
+  background: orange;
+}
+
+.css-1ox2i6c {
+  background: orange;
+}
+
+.css-1ox2i6c {
+  background: green;
+}
+
+@media (min-width:420px) {
+  .css-1ox2i6c {
+    background: blue;
+  }
+}
+
+.css-1ox2i6c {
+  background: orange;
+}
+
+.css-1ox2i6c {
+  background: orange;
+}"
+`;
+
 exports[`facepaint holes 1`] = `
 .glamor-0 {
   color: red;
@@ -189,6 +259,56 @@ exports[`facepaint holes 2`] = `
   .css-1myvor3 {
     color: darkorchid;
   }
+}"
+`;
+
+exports[`facepaint more composition 1`] = `
+.glamor-0 {
+  margin-top: 1px;
+}
+
+.glamor-0 {
+  margin-top: 500px;
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    margin-top: 2px;
+  }
+}
+
+<div
+  className="glamor-0"
+/>
+`;
+
+exports[`facepaint more composition 2`] = `
+".css-1yp7eyp {
+  margin-top: 1px;
+}
+
+@media (min-width:420px) {
+  .css-1yp7eyp {
+    margin-top: 2px;
+  }
+}
+
+.css-zpi702 {
+  margin-top: 500px;
+}
+
+.css-1ydslhg {
+  margin-top: 1px;
+}
+
+@media (min-width:420px) {
+  .css-1ydslhg {
+    margin-top: 2px;
+  }
+}
+
+.css-1ydslhg {
+  margin-top: 500px;
 }"
 `;
 
