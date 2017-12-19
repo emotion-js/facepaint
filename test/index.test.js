@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { css, sheet, flush } from 'emotion'
+import { css, cx, sheet, flush } from 'emotion'
 
 import facepaint from '../src/index'
 
@@ -220,6 +220,17 @@ describe('facepaint', () => {
 
   test('literal all', () => {
     const result = css(mql({ background: ['red', 'green', 'blue', 'orange'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('literal: prevent unexpected selector', () => {
+    const styles1 = css(mql({ marginTop: [1, 2] }))
+    const styles2 = css(mql({ marginTop: [500, 500] }))
+    const result = cx(styles1, styles2)
     expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>foo</div>).toJSON()
 

@@ -308,6 +308,90 @@ exports[`facepaint literal all 3`] = `
 }"
 `;
 
+exports[`facepaint literal: prevent unexpected selector 1`] = `"css-15ynynd"`;
+
+exports[`facepaint literal: prevent unexpected selector 2`] = `
+@media (min-width:420px) {
+  .glamor-0 {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    margin-top: 500px;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  foo
+</div>
+`;
+
+exports[`facepaint literal: prevent unexpected selector 3`] = `
+"@media (min-width:420px) {
+  .css-1ca8ec {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-1ca8ec {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-13rmv1r {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-13rmv1r {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-15ynynd {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-15ynynd {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-15ynynd {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-15ynynd {
+    margin-top: 500px;
+  }
+}"
+`;
+
 exports[`facepaint multiple 1`] = `"css-egce6e"`;
 
 exports[`facepaint multiple 2`] = `
