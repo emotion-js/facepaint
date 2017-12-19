@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`facepaint array values with selectors 1`] = `"css-1ot4erq"`;
-
-exports[`facepaint array values with selectors 2`] = `
+exports[`facepaint array values with selectors 1`] = `
 .glamor-0 .current-index {
   color: blue;
   margin-right: 15px;
@@ -37,7 +35,7 @@ exports[`facepaint array values with selectors 2`] = `
 </div>
 `;
 
-exports[`facepaint array values with selectors 3`] = `
+exports[`facepaint array values with selectors 2`] = `
 ".css-1ot4erq .current-index {
   color: blue;
   margin-right: 15px;
@@ -61,9 +59,7 @@ exports[`facepaint array values with selectors 3`] = `
 }"
 `;
 
-exports[`facepaint basic 1`] = `"css-xee1ha"`;
-
-exports[`facepaint basic 2`] = `
+exports[`facepaint basic 1`] = `
 .glamor-0 {
   color: red;
 }
@@ -93,7 +89,7 @@ exports[`facepaint basic 2`] = `
 </div>
 `;
 
-exports[`facepaint basic 3`] = `
+exports[`facepaint basic 2`] = `
 ".css-xee1ha {
   color: red;
 }
@@ -117,9 +113,7 @@ exports[`facepaint basic 3`] = `
 }"
 `;
 
-exports[`facepaint boolean, null, and undefined values 1`] = `"css-dhb7kq"`;
-
-exports[`facepaint boolean, null, and undefined values 2`] = `
+exports[`facepaint boolean, null, and undefined values 1`] = `
 .glamor-0 {
   color: blue;
   color: red;
@@ -137,16 +131,14 @@ exports[`facepaint boolean, null, and undefined values 2`] = `
 </div>
 `;
 
-exports[`facepaint boolean, null, and undefined values 3`] = `
+exports[`facepaint boolean, null, and undefined values 2`] = `
 ".css-dhb7kq {
   color: blue;
   color: red;
 }"
 `;
 
-exports[`facepaint holes 1`] = `"css-196uzh"`;
-
-exports[`facepaint holes 2`] = `
+exports[`facepaint holes 1`] = `
 .glamor-0 {
   color: red;
 }
@@ -170,7 +162,7 @@ exports[`facepaint holes 2`] = `
 </div>
 `;
 
-exports[`facepaint holes 3`] = `
+exports[`facepaint holes 2`] = `
 ".css-196uzh {
   color: red;
 }
@@ -188,9 +180,7 @@ exports[`facepaint holes 3`] = `
 }"
 `;
 
-exports[`facepaint multiple 1`] = `"css-egce6e"`;
-
-exports[`facepaint multiple 2`] = `
+exports[`facepaint multiple 1`] = `
 .glamor-0 {
   color: red;
   display: -webkit-box;
@@ -232,7 +222,7 @@ exports[`facepaint multiple 2`] = `
 </div>
 `;
 
-exports[`facepaint multiple 3`] = `
+exports[`facepaint multiple 2`] = `
 ".css-egce6e {
   color: red;
   display: -webkit-box;
@@ -268,9 +258,7 @@ exports[`facepaint multiple 3`] = `
 }"
 `;
 
-exports[`facepaint nested 1`] = `"css-rbuh8g"`;
-
-exports[`facepaint nested 2`] = `
+exports[`facepaint nested 1`] = `
 .glamor-0 {
   background-color: hotpink;
   text-align: center;
@@ -351,7 +339,7 @@ exports[`facepaint nested 2`] = `
 </div>
 `;
 
-exports[`facepaint nested 3`] = `
+exports[`facepaint nested 2`] = `
 ".css-rbuh8g {
   background-color: hotpink;
   text-align: center;
@@ -421,9 +409,7 @@ exports[`facepaint nested 3`] = `
 }"
 `;
 
-exports[`facepaint nested arrays 1`] = `"css-1faqh3h"`;
-
-exports[`facepaint nested arrays 2`] = `
+exports[`facepaint nested arrays 1`] = `
 .glamor-0 {
   color: red;
 }
@@ -447,7 +433,7 @@ exports[`facepaint nested arrays 2`] = `
 </div>
 `;
 
-exports[`facepaint nested arrays 3`] = `
+exports[`facepaint nested arrays 2`] = `
 ".css-1faqh3h {
   color: red;
 }
@@ -465,9 +451,7 @@ exports[`facepaint nested arrays 3`] = `
 }"
 `;
 
-exports[`facepaint pseudo 1`] = `"css-1guvnfu"`;
-
-exports[`facepaint pseudo 2`] = `
+exports[`facepaint pseudo 1`] = `
 .glamor-0 {
   background-color: hotpink;
   text-align: center;
@@ -530,7 +514,7 @@ exports[`facepaint pseudo 2`] = `
 </div>
 `;
 
-exports[`facepaint pseudo 3`] = `
+exports[`facepaint pseudo 2`] = `
 ".css-1guvnfu {
   background-color: hotpink;
   text-align: center;
@@ -582,9 +566,7 @@ exports[`facepaint pseudo 3`] = `
 }"
 `;
 
-exports[`facepaint repeating 1`] = `"css-nhhz1q"`;
-
-exports[`facepaint repeating 2`] = `
+exports[`facepaint repeating 1`] = `
 .glamor-0 {
   color: red;
 }
@@ -608,7 +590,7 @@ exports[`facepaint repeating 2`] = `
 </div>
 `;
 
-exports[`facepaint repeating 3`] = `
+exports[`facepaint repeating 2`] = `
 ".css-nhhz1q {
   color: red;
 }
@@ -626,9 +608,7 @@ exports[`facepaint repeating 3`] = `
 }"
 `;
 
-exports[`facepaint undefined 1`] = `"css-196uzh"`;
-
-exports[`facepaint undefined 2`] = `
+exports[`facepaint undefined 1`] = `
 .glamor-0 {
   color: red;
 }
@@ -652,7 +632,7 @@ exports[`facepaint undefined 2`] = `
 </div>
 `;
 
-exports[`facepaint undefined 3`] = `
+exports[`facepaint undefined 2`] = `
 ".css-196uzh {
   color: red;
 }
