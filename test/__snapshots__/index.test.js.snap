@@ -2,19 +2,13 @@
 
 exports[`facepaint array values with selectors 1`] = `
 .glamor-0 .current-index {
+  color: blue;
   margin-right: 15px;
+  display: none;
   -webkit-letter-spacing: 3px;
   -moz-letter-spacing: 3px;
   -ms-letter-spacing: 3px;
   letter-spacing: 3px;
-}
-
-.glamor-0 .current-index {
-  color: blue;
-}
-
-.glamor-0 .current-index {
-  display: none;
 }
 
 @media (min-width:420px) {
@@ -42,30 +36,24 @@ exports[`facepaint array values with selectors 1`] = `
 `;
 
 exports[`facepaint array values with selectors 2`] = `
-".css-1n491te .current-index {
+".css-1ot4erq .current-index {
+  color: blue;
   margin-right: 15px;
+  display: none;
   -webkit-letter-spacing: 3px;
   -moz-letter-spacing: 3px;
   -ms-letter-spacing: 3px;
   letter-spacing: 3px;
 }
 
-.css-1n491te .current-index {
-  color: blue;
-}
-
 @media (min-width:420px) {
-  .css-1n491te .current-index {
+  .css-1ot4erq .current-index {
     color: red;
   }
 }
 
-.css-1n491te .current-index {
-  display: none;
-}
-
 @media (min-width:420px) {
-  .css-1n491te .current-index {
+  .css-1ot4erq .current-index {
     display: block;
   }
 }"
@@ -102,24 +90,24 @@ exports[`facepaint basic 1`] = `
 `;
 
 exports[`facepaint basic 2`] = `
-".css-17umrpw {
+".css-xee1ha {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-17umrpw {
+  .css-xee1ha {
     color: green;
   }
 }
 
 @media (min-width:920px) {
-  .css-17umrpw {
+  .css-xee1ha {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-17umrpw {
+  .css-xee1ha {
     color: darkorchid;
   }
 }"
@@ -152,18 +140,9 @@ exports[`facepaint boolean, null, and undefined values 2`] = `
 
 exports[`facepaint composition 1`] = `
 .glamor-0 {
-  background: orange;
-}
-
-.glamor-0 {
   background: green;
-}
-
-.glamor-0 {
   background: orange;
-}
-
-.glamor-0 {
+  background: orange;
   background: orange;
 }
 
@@ -179,12 +158,12 @@ exports[`facepaint composition 1`] = `
 `;
 
 exports[`facepaint composition 2`] = `
-".css-1nun30 {
+".css-16gx40p {
   background: green;
 }
 
 @media (min-width:420px) {
-  .css-1nun30 {
+  .css-16gx40p {
     background: blue;
   }
 }
@@ -193,30 +172,17 @@ exports[`facepaint composition 2`] = `
   background: orange;
 }
 
-.css-128fsyx {
-  background: orange;
-}
-
-.css-1ox2i6c {
-  background: orange;
-}
-
-.css-1ox2i6c {
+.css-1plng0y {
   background: green;
+  background: orange;
+  background: orange;
+  background: orange;
 }
 
 @media (min-width:420px) {
-  .css-1ox2i6c {
+  .css-1plng0y {
     background: blue;
   }
-}
-
-.css-1ox2i6c {
-  background: orange;
-}
-
-.css-1ox2i6c {
-  background: orange;
 }"
 `;
 
@@ -245,19 +211,223 @@ exports[`facepaint holes 1`] = `
 `;
 
 exports[`facepaint holes 2`] = `
-".css-1myvor3 {
+".css-196uzh {
   color: red;
 }
 
 @media (min-width:920px) {
-  .css-1myvor3 {
+  .css-196uzh {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1myvor3 {
+  .css-196uzh {
     color: darkorchid;
+  }
+}"
+`;
+
+exports[`facepaint literal 1 1`] = `"css-1n438h9"`;
+
+exports[`facepaint literal 1 2`] = `
+@media (min-width:420px) {
+  .glamor-0 {
+    background: red;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  foo
+</div>
+`;
+
+exports[`facepaint literal 1 3`] = `
+"@media (min-width:420px) {
+  .css-1n438h9 {
+    background: red;
+  }
+}"
+`;
+
+exports[`facepaint literal 2 1`] = `"css-1k7f7mv"`;
+
+exports[`facepaint literal 2 2`] = `
+@media (min-width:420px) {
+  .glamor-0 {
+    background: red;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    background: green;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  foo
+</div>
+`;
+
+exports[`facepaint literal 2 3`] = `
+"@media (min-width:420px) {
+  .css-1k7f7mv {
+    background: red;
+  }
+}
+
+@media (min-width:920px) {
+  .css-1k7f7mv {
+    background: green;
+  }
+}"
+`;
+
+exports[`facepaint literal all 1`] = `"css-1ahnw43"`;
+
+exports[`facepaint literal all 2`] = `
+@media (min-width:420px) {
+  .glamor-0 {
+    background: red;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    background: green;
+  }
+}
+
+@media (min-width:1120px) {
+  .glamor-0 {
+    background: blue;
+  }
+}
+
+@media (min-width:11200px) {
+  .glamor-0 {
+    background: orange;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  foo
+</div>
+`;
+
+exports[`facepaint literal all 3`] = `
+"@media (min-width:420px) {
+  .css-1ahnw43 {
+    background: red;
+  }
+}
+
+@media (min-width:920px) {
+  .css-1ahnw43 {
+    background: green;
+  }
+}
+
+@media (min-width:1120px) {
+  .css-1ahnw43 {
+    background: blue;
+  }
+}
+
+@media (min-width:11200px) {
+  .css-1ahnw43 {
+    background: orange;
+  }
+}"
+`;
+
+exports[`facepaint literal: prevent unexpected selector 1`] = `"css-15ynynd"`;
+
+exports[`facepaint literal: prevent unexpected selector 2`] = `
+@media (min-width:420px) {
+  .glamor-0 {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .glamor-0 {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .glamor-0 {
+    margin-top: 500px;
+  }
+}
+
+<div
+  className="glamor-0"
+>
+  foo
+</div>
+`;
+
+exports[`facepaint literal: prevent unexpected selector 3`] = `
+"@media (min-width:420px) {
+  .css-1ca8ec {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-1ca8ec {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-13rmv1r {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-13rmv1r {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-15ynynd {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-15ynynd {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width:420px) {
+  .css-15ynynd {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width:920px) {
+  .css-15ynynd {
+    margin-top: 500px;
   }
 }"
 `;
@@ -265,9 +435,6 @@ exports[`facepaint holes 2`] = `
 exports[`facepaint more composition 1`] = `
 .glamor-0 {
   margin-top: 1px;
-}
-
-.glamor-0 {
   margin-top: 500px;
 }
 
@@ -283,50 +450,44 @@ exports[`facepaint more composition 1`] = `
 `;
 
 exports[`facepaint more composition 2`] = `
-".css-1yp7eyp {
+".css-1lg6icu {
   margin-top: 1px;
 }
 
 @media (min-width:420px) {
-  .css-1yp7eyp {
+  .css-1lg6icu {
     margin-top: 2px;
   }
 }
 
-.css-zpi702 {
+.css-lk2z8m {
   margin-top: 500px;
 }
 
-.css-1ydslhg {
+.css-1874a9x {
   margin-top: 1px;
+  margin-top: 500px;
 }
 
 @media (min-width:420px) {
-  .css-1ydslhg {
+  .css-1874a9x {
     margin-top: 2px;
   }
-}
-
-.css-1ydslhg {
-  margin-top: 500px;
 }"
 `;
 
 exports[`facepaint multiple 1`] = `
-.glamor-0 {
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .glamor-0 {
   color: red;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width:420px) {
@@ -358,7 +519,12 @@ exports[`facepaint multiple 1`] = `
 `;
 
 exports[`facepaint multiple 2`] = `
-".css-dfpbx9 {
+".css-egce6e {
+  color: red;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -366,30 +532,22 @@ exports[`facepaint multiple 2`] = `
   align-items: center;
 }
 
-.css-dfpbx9 {
-  color: red;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 @media (min-width:420px) {
-  .css-dfpbx9 {
+  .css-egce6e {
     color: green;
     display: block;
   }
 }
 
 @media (min-width:920px) {
-  .css-dfpbx9 {
+  .css-egce6e {
     color: blue;
     display: inline-block;
   }
 }
 
 @media (min-width:1120px) {
-  .css-dfpbx9 {
+  .css-egce6e {
     color: darkorchid;
     display: table;
   }
@@ -400,9 +558,6 @@ exports[`facepaint nested 1`] = `
 .glamor-0 {
   background-color: hotpink;
   text-align: center;
-}
-
-.glamor-0 {
   width: 25%;
 }
 
@@ -481,73 +636,70 @@ exports[`facepaint nested 1`] = `
 `;
 
 exports[`facepaint nested 2`] = `
-".css-1xa5b6k {
+".css-rbuh8g {
   background-color: hotpink;
   text-align: center;
-}
-
-.css-1xa5b6k {
   width: 25%;
 }
 
 @media (min-width:420px) {
-  .css-1xa5b6k {
+  .css-rbuh8g {
     width: 50%;
   }
 }
 
 @media (min-width:920px) {
-  .css-1xa5b6k {
+  .css-rbuh8g {
     width: 75%;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1xa5b6k {
+  .css-rbuh8g {
     width: 100%;
   }
 }
 
-.css-1xa5b6k .foo {
+.css-rbuh8g .foo {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-1xa5b6k .foo {
+  .css-rbuh8g .foo {
     color: green;
   }
 }
 
 @media (min-width:920px) {
-  .css-1xa5b6k .foo {
+  .css-rbuh8g .foo {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1xa5b6k .foo {
+  .css-rbuh8g .foo {
     color: darkorchid;
   }
 }
 
-.css-1xa5b6k .foo img {
+.css-rbuh8g .foo img {
   height: 10px;
 }
 
 @media (min-width:420px) {
-  .css-1xa5b6k .foo img {
+  .css-rbuh8g .foo img {
     height: 15px;
   }
 }
 
 @media (min-width:920px) {
-  .css-1xa5b6k .foo img {
+  .css-rbuh8g .foo img {
     height: 20px;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1xa5b6k .foo img {
+  .css-rbuh8g .foo img {
     height: 25px;
   }
 }"
@@ -578,18 +730,18 @@ exports[`facepaint nested arrays 1`] = `
 `;
 
 exports[`facepaint nested arrays 2`] = `
-".css-1kdodwg {
+".css-1faqh3h {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-1kdodwg {
+  .css-1faqh3h {
     color: blue;
   }
 }
 
 @media (min-width:920px) {
-  .css-1kdodwg {
+  .css-1faqh3h {
     color: darkorchid;
   }
 }"
@@ -599,9 +751,6 @@ exports[`facepaint pseudo 1`] = `
 .glamor-0 {
   background-color: hotpink;
   text-align: center;
-}
-
-.glamor-0 {
   width: 25%;
 }
 
@@ -662,56 +811,53 @@ exports[`facepaint pseudo 1`] = `
 `;
 
 exports[`facepaint pseudo 2`] = `
-".css-13tn68s {
+".css-1guvnfu {
   background-color: hotpink;
   text-align: center;
-}
-
-.css-13tn68s {
   width: 25%;
 }
 
-.css-13tn68s:hover {
+.css-1guvnfu:hover {
   width: 50%;
 }
 
-.css-13tn68s:active {
+.css-1guvnfu:active {
   width: 75%;
 }
 
-.css-13tn68s:focus {
+.css-1guvnfu:focus {
   width: 100%;
 }
 
-.css-13tn68s .foo {
+.css-1guvnfu .foo {
   color: red;
 }
 
-.css-13tn68s .foo:hover {
+.css-1guvnfu .foo:hover {
   color: green;
 }
 
-.css-13tn68s .foo:active {
+.css-1guvnfu .foo:active {
   color: blue;
 }
 
-.css-13tn68s .foo:focus {
+.css-1guvnfu .foo:focus {
   color: darkorchid;
 }
 
-.css-13tn68s .foo img {
+.css-1guvnfu .foo img {
   height: 10px;
 }
 
-.css-13tn68s .foo img:hover {
+.css-1guvnfu .foo img:hover {
   height: 15px;
 }
 
-.css-13tn68s .foo img:active {
+.css-1guvnfu .foo img:active {
   height: 20px;
 }
 
-.css-13tn68s .foo img:focus {
+.css-1guvnfu .foo img:focus {
   height: 25px;
 }"
 `;
@@ -741,18 +887,18 @@ exports[`facepaint repeating 1`] = `
 `;
 
 exports[`facepaint repeating 2`] = `
-".css-1ki7d2p {
+".css-nhhz1q {
   color: red;
 }
 
 @media (min-width:420px) {
-  .css-1ki7d2p {
+  .css-nhhz1q {
     color: blue;
   }
 }
 
 @media (min-width:11200px) {
-  .css-1ki7d2p {
+  .css-nhhz1q {
     color: darkorchid;
   }
 }"
@@ -783,18 +929,18 @@ exports[`facepaint undefined 1`] = `
 `;
 
 exports[`facepaint undefined 2`] = `
-".css-1myvor3 {
+".css-196uzh {
   color: red;
 }
 
 @media (min-width:920px) {
-  .css-1myvor3 {
+  .css-196uzh {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .css-1myvor3 {
+  .css-196uzh {
     color: darkorchid;
   }
 }"
