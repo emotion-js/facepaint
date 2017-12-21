@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { css, sheet, flush } from 'emotion'
+import { css, sheet, flush, cx } from 'emotion'
 
 import facepaint from '../src/index'
 
@@ -21,7 +21,6 @@ describe('facepaint', () => {
   afterEach(() => flush())
   test('basic', () => {
     const result = css(mq({ color: ['red', 'green', 'blue', 'darkorchid'] }))
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -29,7 +28,6 @@ describe('facepaint', () => {
 
   test('holes', () => {
     const result = css(mq({ color: ['red', , 'blue', 'darkorchid'] }))
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -37,7 +35,6 @@ describe('facepaint', () => {
 
   test('undefined', () => {
     const result = css(mq({ color: ['red', undefined, 'blue', 'darkorchid'] }))
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -47,7 +44,6 @@ describe('facepaint', () => {
     const result = css(
       mq({ color: ['red', 'blue', undefined, 'blue', 'darkorchid'] })
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -55,7 +51,6 @@ describe('facepaint', () => {
 
   test('nested arrays', () => {
     const result = css(mq([[[[{ color: ['red', 'blue', 'darkorchid'] }]]]]))
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>Basic</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -70,7 +65,6 @@ describe('facepaint', () => {
         alignItems: 'center'
       })
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer.create(<div css={result}>multiple</div>).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
@@ -90,7 +84,6 @@ describe('facepaint', () => {
         }
       })
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer
       .create(
         <div css={result}>
@@ -117,7 +110,6 @@ describe('facepaint', () => {
         }
       })
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer
       .create(
         <div css={result}>
@@ -145,7 +137,6 @@ describe('facepaint', () => {
         ]
       })
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer
       .create(
         <div css={result}>
@@ -177,7 +168,6 @@ describe('facepaint', () => {
         ]
       )
     )
-    expect(result).toMatchSnapshot()
     const tree = renderer
       .create(
         <div css={result}>
@@ -186,6 +176,23 @@ describe('facepaint', () => {
         </div>
       )
       .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+  test('composition', () => {
+    const a = css(mq({ background: ['green', 'blue'] }))
+    const b = css(mq({ background: 'orange' }))
+    const c = css(mq({ background: ['orange', 'orange'] }))
+    const d = css(mq({ background: ['orange', 'orange', 'orange', 'orange'] }))
+
+    const tree = renderer.create(<div css={cx(a, b, c, d)} />).toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+  test('more composition', () => {
+    const styles1 = css(mq({ marginTop: [1, 2] }))
+    const styles2 = css(mq({ marginTop: [500, 500] }))
+    const tree = renderer.create(<div css={cx(styles1, styles2)} />).toJSON()
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })

@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 export default function(breakpoints, { overlap } = {}) {
-  const mq = [''].concat(breakpoints)
+  const mq = ['&'].concat(breakpoints)
   function flatten(obj) {
     if (typeof obj !== 'object' || obj == null) {
       return []
@@ -30,9 +30,7 @@ export default function(breakpoints, { overlap } = {}) {
 
           prior = v
 
-          if (index === 0) {
-            slots[key] = v
-          } else if (!slots[mq[index]]) {
+          if (slots[mq[index]] === undefined) {
             slots[mq[index]] = { [key]: v }
           } else {
             slots[mq[index]][key] = v
