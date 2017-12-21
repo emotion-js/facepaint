@@ -56,16 +56,19 @@ exports[`facepaint holes 1`] = `
 
 exports[`facepaint multiple 1`] = `
 .c0 {
-  color: red;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c0 {
+  color: red;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width:420px) {
@@ -100,6 +103,9 @@ exports[`facepaint nested 1`] = `
 .c0 {
   background-color: hotpink;
   text-align: center;
+}
+
+.c0 {
   width: 25%;
 }
 
