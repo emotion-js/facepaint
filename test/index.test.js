@@ -15,6 +15,16 @@ const mq = facepaint(
   { overlap: true }
 )
 
+const mql = facepaint(
+  [
+    '@media(min-width: 420px)',
+    '@media(min-width: 920px)',
+    '@media(min-width: 1120px)',
+    '@media(min-width: 11200px)'
+  ],
+  { literal: true }
+)
+
 const pseudo = facepaint([':hover', ':active', ':focus'])
 
 describe('facepaint', () => {
@@ -168,6 +178,7 @@ describe('facepaint', () => {
         ]
       )
     )
+
     const tree = renderer
       .create(
         <div css={result}>
@@ -179,6 +190,7 @@ describe('facepaint', () => {
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
+
   test('composition', () => {
     const a = css(mq({ background: ['green', 'blue'] }))
     const b = css(mq({ background: 'orange' }))
@@ -189,10 +201,49 @@ describe('facepaint', () => {
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
+
   test('more composition', () => {
     const styles1 = css(mq({ marginTop: [1, 2] }))
     const styles2 = css(mq({ marginTop: [500, 500] }))
     const tree = renderer.create(<div css={cx(styles1, styles2)} />).toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('literal 1', () => {
+    const result = css(mql({ background: ['red'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('literal 2', () => {
+    const result = css(mql({ background: ['red', 'green'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('literal all', () => {
+    const result = css(mql({ background: ['red', 'green', 'blue', 'orange'] }))
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
+    expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+
+  test('literal: prevent unexpected selector', () => {
+    const styles1 = css(mql({ marginTop: [1, 2] }))
+    const styles2 = css(mql({ marginTop: [500, 500] }))
+    const result = cx(styles1, styles2)
+    expect(result).toMatchSnapshot()
+    const tree = renderer.create(<div css={result}>foo</div>).toJSON()
+
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })

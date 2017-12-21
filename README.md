@@ -31,7 +31,7 @@ yarn add facepaint
 
 ## API
 
-#### facepaint `function` 
+#### facepaint `function`
 
 ```javascript
 facepaint(selectors: Array<Selector>) : DynamicStyleFunction
@@ -46,23 +46,27 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
     '@media(min-width: 1120px)'
   ])
   ```
-  
+
 * *options*
   ```javascript
   const mq = facepaint(
-    [...], 
-    { overlap: true|false }
+    [...],
+    {
+      literal: true|false,
+      overlap: true|false
+    }
   )
   ```
+  - literal `boolean` (Default: `false`) - force "slot"
   - overlap `boolean` (Default: `false`) - remove any duplicate values found in multiple "slots"
 
 **Returns**
 
 `facepaint` returns a function that can be exported and used throughout
-your app to dynamically style based on your provided selectors. 
+your app to dynamically style based on your provided selectors.
 
 - The function accepts any number of arrays or objects as arguments.
-- Nested arrays are flattened. 
+- Nested arrays are flattened.
 - Boolean, `undefined`, and `null` values are ignored.
 
 
