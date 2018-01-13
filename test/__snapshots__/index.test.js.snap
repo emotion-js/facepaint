@@ -228,6 +228,29 @@ exports[`facepaint holes 2`] = `
 }"
 `;
 
+exports[`facepaint https://github.com/emotion-js/facepaint/issues/9 1`] = `
+".css-1eyh3wc {
+  background: white;
+  border-bottom: 1px solid black;
+  height: 360px;
+  padding: 8px 15px 3px;
+}
+
+@media (min-width:400px) {
+  .css-1eyh3wc {
+    height: 350px;
+    padding: 11px 15px 6px;
+  }
+}
+
+@media (min-width:700px) {
+  .css-1eyh3wc {
+    border-bottom: 0;
+    padding: 4px 15px 2px;
+  }
+}"
+`;
+
 exports[`facepaint literal 1 1`] = `"css-1n438h9"`;
 
 exports[`facepaint literal 1 2`] = `

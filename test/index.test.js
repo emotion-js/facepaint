@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { css, sheet, flush, cx } from 'emotion'
+import { css, sheet, flush, cx, registered } from 'emotion'
 
 import facepaint from '../src/index'
 
@@ -245,6 +245,22 @@ describe('facepaint', () => {
     const tree = renderer.create(<div css={result}>foo</div>).toJSON()
 
     expect(tree).toMatchSnapshot()
+    expect(sheet).toMatchSnapshot()
+  })
+  test('https://github.com/emotion-js/facepaint/issues/9', () => {
+    const lolol = facepaint([
+      '@media (min-width: 400px)',
+      '@media (min-width: 700px)',
+      '@media print'
+    ])
+    css(
+      lolol({
+        background: ['white'],
+        borderBottom: ['1px solid black', null, 0],
+        height: ['360px', '350px'],
+        padding: ['8px 15px 3px', '11px 15px 6px', '4px 15px 2px']
+      })
+    )
     expect(sheet).toMatchSnapshot()
   })
 })

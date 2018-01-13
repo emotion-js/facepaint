@@ -11,14 +11,16 @@ export default function(breakpoints, { literal, overlap } = {}) {
       return obj.map(flatten)
     }
 
-    return Object.keys(obj).reduce((slots, key) => {
-      // Check if value is an array, but skip if it looks like a selector.
-      // key.indexOf('&') === 0
+    let init = {}
+    breakpoints.forEach(breakpoint => {
+      init[breakpoint] = undefined
+    })
 
+    let ret = Object.keys(obj).reduce((slots, key) => {
       let item = obj[key]
-      if (!Array.isArray(item) && literal) item = [item]
+      if (literal && !Array.isArray(item)) item = [item]
 
-      if ((literal || Array.isArray(item)) && key.charCodeAt(0) !== 38) {
+      if (Array.isArray(item) && key.charCodeAt(0) !== 38 /* & */) {
         let prior
         item.forEach((v, index) => {
           // Optimize by removing duplicated media query entries
@@ -49,7 +51,13 @@ export default function(breakpoints, { literal, overlap } = {}) {
         slots[key] = item
       }
       return slots
-    }, {})
+    }, init)
+    breakpoints.forEach(breakpoint => {
+      if (ret[breakpoint] === undefined) {
+        delete ret[breakpoint]
+      }
+    })
+    return ret
   }
 
   return (...values) => values.map(flatten)
