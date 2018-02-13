@@ -36,7 +36,7 @@ exports[`facepaint array values with selectors 1`] = `
 `;
 
 exports[`facepaint array values with selectors 2`] = `
-".css-1ot4erq .current-index {
+".css-j9a8v3 .current-index {
   color: blue;
   margin-right: 15px;
   display: none;
@@ -47,13 +47,13 @@ exports[`facepaint array values with selectors 2`] = `
 }
 
 @media (min-width:420px) {
-  .css-1ot4erq .current-index {
+  .css-j9a8v3 .current-index {
     color: red;
   }
 }
 
 @media (min-width:420px) {
-  .css-1ot4erq .current-index {
+  .css-j9a8v3 .current-index {
     display: block;
   }
 }"
@@ -136,6 +136,35 @@ exports[`facepaint boolean, null, and undefined values 2`] = `
   color: blue;
   color: red;
 }"
+`;
+
+exports[`facepaint complex overlapped 1`] = `
+Array [
+  Object {
+    "@media(min-width: 1120px)": Object {
+      "background": "darkorchid",
+      "color": "darkorchid",
+    },
+    "@media(min-width: 420px)": Object {
+      "background": "green",
+    },
+    "@media(min-width: 920px)": Object {
+      "color": "blue",
+    },
+    "background": "red",
+    "color": "red",
+  },
+]
+`;
+
+exports[`facepaint complex overlapped 2`] = `
+Array [
+  "color",
+  "background",
+  "@media(min-width: 420px)",
+  "@media(min-width: 920px)",
+  "@media(min-width: 1120px)",
+]
 `;
 
 exports[`facepaint composition 1`] = `
@@ -519,7 +548,7 @@ exports[`facepaint multiple 1`] = `
 `;
 
 exports[`facepaint multiple 2`] = `
-".css-egce6e {
+".css-1lsvhjc {
   color: red;
   display: -webkit-box;
   display: -webkit-flex;
@@ -533,21 +562,21 @@ exports[`facepaint multiple 2`] = `
 }
 
 @media (min-width:420px) {
-  .css-egce6e {
+  .css-1lsvhjc {
     color: green;
     display: block;
   }
 }
 
 @media (min-width:920px) {
-  .css-egce6e {
+  .css-1lsvhjc {
     color: blue;
     display: inline-block;
   }
 }
 
 @media (min-width:1120px) {
-  .css-egce6e {
+  .css-1lsvhjc {
     color: darkorchid;
     display: table;
   }

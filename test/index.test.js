@@ -247,4 +247,13 @@ describe('facepaint', () => {
     expect(tree).toMatchSnapshot()
     expect(sheet).toMatchSnapshot()
   })
+
+  test('complex overlapped', () => {
+    const result = mq({
+      color: ['red', 'red', 'blue', 'darkorchid'],
+      background: ['red', 'green', 'green', 'darkorchid']
+    })
+    expect(result).toMatchSnapshot()
+    expect(Object.keys(result[0])).toMatchSnapshot()
+  })
 })

@@ -11,7 +11,10 @@ export default function(breakpoints, { literal, overlap } = {}) {
       return obj.map(flatten)
     }
 
-    return Object.keys(obj).reduce((slots, key) => {
+    const slots = {}
+    const objects = {}
+    const props = {}
+    Object.keys(obj).forEach(key => {
       // Check if value is an array, but skip if it looks like a selector.
       // key.indexOf('&') === 0
 
@@ -36,7 +39,7 @@ export default function(breakpoints, { literal, overlap } = {}) {
           prior = v
 
           if (index === 0 && !literal) {
-            slots[key] = v
+            props[key] = v
           } else if (slots[mq[index]] === undefined) {
             slots[mq[index]] = { [key]: v }
           } else {
@@ -44,12 +47,20 @@ export default function(breakpoints, { literal, overlap } = {}) {
           }
         })
       } else if (typeof item === 'object') {
-        slots[key] = flatten(item)
+        objects[key] = flatten(item)
       } else {
-        slots[key] = item
+        props[key] = item
       }
-      return slots
-    }, {})
+    })
+
+    // Ensure that all slots and then child objects are pushed to the end
+    mq.forEach(el => {
+      if (slots[el]) {
+        props[el] = slots[el];
+      }
+    })
+    Object.assign(props, objects)
+    return props
   }
 
   return (...values) => values.map(flatten)
