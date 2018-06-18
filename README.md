@@ -285,7 +285,7 @@ const Div = styled('div')`
 import { css } from 'emotion'
 import facepaint from 'facepaint'
 
-const pseudo = facepaint([':hover', ':active', ':focus'])
+const pseudo = facepaint([':hover', ':focus', ':active'])
 
 const myClassName = css(
   pseudo({
@@ -314,11 +314,11 @@ const myClassName = css(
   width: 50%;
 }
 
-.css-1guvnfu:active {
+.css-1guvnfu:focus {
   width: 75%;
 }
 
-.css-1guvnfu:focus {
+.css-1guvnfu:active {
   width: 100%;
 }
 
@@ -330,11 +330,11 @@ const myClassName = css(
   color: green;
 }
 
-.css-1guvnfu .foo:active {
+.css-1guvnfu .foo:focus {
   color: blue;
 }
 
-.css-1guvnfu .foo:focus {
+.css-1guvnfu .foo:active {
   color: darkorchid;
 }
 
@@ -346,11 +346,11 @@ const myClassName = css(
   height: 15px;
 }
 
-.css-1guvnfu .foo img:active {
+.css-1guvnfu .foo img:focus {
   height: 20px;
 }
 
-.css-1guvnfu .foo img:focus {
+.css-1guvnfu .foo img:active {
   height: 25px;
 }
 ```
