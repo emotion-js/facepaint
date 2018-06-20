@@ -58,7 +58,59 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
   )
   ```
   - literal `boolean` (Default: `false`) - force "slot"
-  - overlap `boolean` (Default: `false`) - remove any duplicate values found in multiple "slots"
+  - overlap `boolean` (Default: `false`) - overlap values that occur in multiple media queries or slots
+    
+    Given the following:
+    
+    ```javascript
+    const mq = facepaint([
+      '@media(min-width: 420px)'
+    ], { overlap: true })
+    
+    const expandedStyles = mq({
+      color: ['red', 'red']
+    })
+    ```
+    The value of `expandedStyles` would not contain any media query breakpoints. This is an optimization to remove bytes from the final code.
+    
+    ```javascript 
+    { color: 'red' }
+    ```
+    
+    vs.
+    
+    ```javascript 
+    { 
+      color: 'red',
+      '@media(min-width: 420px)': {
+        color: 'red'
+      }
+    }
+    ```
+    
+    The downside of enabling this option is that when attempting to overwrite the value of `color` in another style definition the expected media query will be missing. 
+    
+    ```javascript
+    const composedStyles = css(mq({ color: ['red', 'red'] }), { color: 'blue' })
+    ```
+    
+    In this case the color will not change to `red` at a screen width of `420px`. It will stay `blue`.
+    
+    ```javascript 
+    { color: 'blue' }
+    ```
+    
+    vs.
+    
+    ```javascript 
+    { 
+      color: 'blue',
+      '@media(min-width: 420px)': {
+        color: 'red'
+      }
+    }
+    ```
+    
 
 **Returns**
 
