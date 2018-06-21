@@ -57,8 +57,100 @@ facepaint(selectors: Array<Selector>) : DynamicStyleFunction
     }
   )
   ```
-  - literal `boolean` (Default: `false`) - force "slot"
-  - overlap `boolean` (Default: `false`) - remove any duplicate values found in multiple "slots"
+  - **literal** `boolean` (Default: `false`) - output should match arguments given to `facepaint` exactly
+    
+    By default, the first value in a value array is applied without a media query or selector and the rest of the values are applied as children of media queries or selectors. When `literal` is set to `true` the values given to a specific css property mapped 1:1 with the arguments provided to `facepaint`.
+    
+    Given the following:
+    
+    ```javascript
+    const mq = facepaint([
+      '@media(min-width: 420px)'
+      '@media(min-width: 920px)'
+    ], { literal: true })
+    
+    const expandedStyles = mq({
+      color: ['red', 'green']
+    })
+    ```
+    
+    The output of `expandedStyles` will be:
+    
+    ```javascript 
+    { 
+      '@media(min-width: 420px)': {
+        color: 'red'
+      },
+      '@media(min-width: 920px)': {
+        color: 'green'
+      }
+    }
+    ```
+    
+    The output is missing any styles on the base style object because the values are mapped to the arguments supplied to `facepaint` literally.
+    
+    
+  
+  - **overlap** `boolean` (Default: `false`) - overlap values that occur in multiple media queries or slots
+    
+    Given the following:
+    
+    ```javascript
+    const mq = facepaint([
+      '@media(min-width: 420px)'
+    ], { overlap: true })
+    
+    const expandedStyles = mq({
+      color: ['red', 'red']
+    })
+    ```
+    
+    The value of `expandedStyles` would not contain any media query breakpoints. This is an optimization to remove bytes from the final code.
+    
+    ```javascript 
+    { color: 'red' }
+    ```
+    
+    vs.
+    
+    ```javascript 
+    { 
+      color: 'red',
+      '@media(min-width: 420px)': {
+        color: 'red'
+      }
+    }
+    ```
+    
+    The downside of enabling this option is that when attempting to overwrite the value of `color` in another style definition the expected media query will be missing. 
+    
+    ```javascript
+    const style1 = css(mq({ color: ['red', 'red'] }))
+    const style2 = css({ color: 'blue' })
+    const composedStyles = css(style1, style2)
+    ```
+    
+    `style1`'s output will *NOT* contain the media query and value for red at `420px` due to the `overlap: true` optimization.
+    
+    The developer that created `composedStyles` might expect the following output.
+    
+    ```javascript 
+    { 
+      color: 'blue',
+      '@media(min-width: 420px)': {
+        color: 'red'
+      }
+    }
+    ```
+    
+    Due to our `overlap: true` optimization however, the final output will be the following.
+    
+    ```javascript 
+    { color: 'blue' }
+    ```
+    
+    
+    
 
 **Returns**
 
