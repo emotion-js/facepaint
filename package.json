@@ -2,19 +2,17 @@
   "name": "facepaint",
   "version": "1.2.1",
   "description": "Responsive style values for css-in-js.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "main": "dist/facepaint.cjs.js",
+  "module": "dist/facepaint.esm.js",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "build": "npm-run-all clean rollup rollup:umd",
-    "clean": "rimraf dist",
+    "build": "preconstruct build",
+    "build:watch": "preconstruct watch",
     "test": "jest --coverage --no-cache --ci --runInBand",
-    "rollup": "rollup -c rollup.config.js",
-    "watch": "rollup -c rollup.config.js --watch",
-    "rollup:umd": "cross-env UMD=true rollup -c rollup.config.js"
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -35,7 +33,7 @@
     "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-standard": "^3.0.1",
@@ -44,6 +42,7 @@
     "jest-emotion": "^9.2.11",
     "jest-styled-components": "^4.9.0",
     "npm-run-all": "^4.0.2",
+    "preconstruct": "^0.0.16",
     "prettier": "^1.7.4",
     "prettier-eslint-cli": "^4.0.3",
     "react": "^16.0.0",
@@ -70,6 +69,10 @@
   "bugs": {
     "url": "https://github.com/emotion-js/facepaint/issues"
   },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
   "eslintConfig": {
     "extends": [
       "standard",
@@ -82,13 +85,7 @@
     ],
     "parser": "babel-eslint",
     "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "semi": false
-        }
-      ],
+      "prettier/prettier": "error",
       "react/prop-types": 0,
       "react/no-unused-prop-types": 0,
       "standard/computed-property-even-spacing": 0,
@@ -113,5 +110,12 @@
       "^emotion-theming$": "<rootDir>/packages/facepaint/src"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
+  },
+  "umd:main": "dist/facepaint.umd.min.js",
+  "preconstruct": {
+    "umdName": "facepaint"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.1"
   }
 }
