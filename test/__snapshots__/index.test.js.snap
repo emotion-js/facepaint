@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`facepaint array values with selectors 1`] = `
-.glamor-0 .current-index {
+.emotion-0 .current-index {
   color: blue;
   margin-right: 15px;
   display: none;
@@ -12,19 +12,19 @@ exports[`facepaint array values with selectors 1`] = `
 }
 
 @media (min-width:420px) {
-  .glamor-0 .current-index {
+  .emotion-0 .current-index {
     color: red;
   }
 }
 
 @media (min-width:420px) {
-  .glamor-0 .current-index {
+  .emotion-0 .current-index {
     display: block;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   <div
     className="foo"
@@ -60,30 +60,30 @@ exports[`facepaint array values with selectors 2`] = `
 `;
 
 exports[`facepaint basic 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     color: green;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   Basic
 </div>
@@ -114,13 +114,13 @@ exports[`facepaint basic 2`] = `
 `;
 
 exports[`facepaint boolean, null, and undefined values 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: blue;
   color: red;
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   <div
     className="foo"
@@ -168,7 +168,7 @@ Array [
 `;
 
 exports[`facepaint composition 1`] = `
-.glamor-0 {
+.emotion-0 {
   background: green;
   background: orange;
   background: orange;
@@ -176,13 +176,13 @@ exports[`facepaint composition 1`] = `
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     background: blue;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 />
 `;
 
@@ -216,24 +216,24 @@ exports[`facepaint composition 2`] = `
 `;
 
 exports[`facepaint holes 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   Basic
 </div>
@@ -261,13 +261,13 @@ exports[`facepaint literal 1 1`] = `"css-1n438h9"`;
 
 exports[`facepaint literal 1 2`] = `
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     background: red;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   foo
 </div>
@@ -285,19 +285,19 @@ exports[`facepaint literal 2 1`] = `"css-1k7f7mv"`;
 
 exports[`facepaint literal 2 2`] = `
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     background: red;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     background: green;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   foo
 </div>
@@ -321,31 +321,31 @@ exports[`facepaint literal all 1`] = `"css-1ahnw43"`;
 
 exports[`facepaint literal all 2`] = `
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     background: red;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     background: green;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     background: blue;
   }
 }
 
 @media (min-width:11200px) {
-  .glamor-0 {
+  .emotion-0 {
     background: orange;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   foo
 </div>
@@ -381,31 +381,31 @@ exports[`facepaint literal: prevent unexpected selector 1`] = `"css-15ynynd"`;
 
 exports[`facepaint literal: prevent unexpected selector 2`] = `
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     margin-top: 1px;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     margin-top: 2px;
   }
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     margin-top: 500px;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     margin-top: 500px;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   foo
 </div>
@@ -462,19 +462,19 @@ exports[`facepaint literal: prevent unexpected selector 3`] = `
 `;
 
 exports[`facepaint more composition 1`] = `
-.glamor-0 {
+.emotion-0 {
   margin-top: 1px;
   margin-top: 500px;
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     margin-top: 2px;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 />
 `;
 
@@ -506,7 +506,7 @@ exports[`facepaint more composition 2`] = `
 `;
 
 exports[`facepaint multiple 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
   display: -webkit-box;
   display: -webkit-flex;
@@ -520,28 +520,28 @@ exports[`facepaint multiple 1`] = `
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     color: green;
     display: block;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
     display: inline-block;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
     display: table;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   multiple
 </div>
@@ -584,76 +584,76 @@ exports[`facepaint multiple 2`] = `
 `;
 
 exports[`facepaint nested 1`] = `
-.glamor-0 {
+.emotion-0 {
   background-color: hotpink;
   text-align: center;
   width: 25%;
 }
 
-.glamor-0 .foo {
-  color: red;
-}
-
-.glamor-0 .foo img {
-  height: 10px;
-}
-
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     width: 50%;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     width: 75%;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     width: 100%;
   }
 }
 
+.emotion-0 .foo {
+  color: red;
+}
+
 @media (min-width:420px) {
-  .glamor-0 .foo {
+  .emotion-0 .foo {
     color: green;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 .foo {
+  .emotion-0 .foo {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 .foo {
+  .emotion-0 .foo {
     color: darkorchid;
   }
 }
 
+.emotion-0 .foo img {
+  height: 10px;
+}
+
 @media (min-width:420px) {
-  .glamor-0 .foo img {
+  .emotion-0 .foo img {
     height: 15px;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 .foo img {
+  .emotion-0 .foo img {
     height: 20px;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 .foo img {
+  .emotion-0 .foo img {
     height: 25px;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   <div
     className="foo"
@@ -735,24 +735,24 @@ exports[`facepaint nested 2`] = `
 `;
 
 exports[`facepaint nested arrays 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
   }
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   Basic
 </div>
@@ -777,58 +777,58 @@ exports[`facepaint nested arrays 2`] = `
 `;
 
 exports[`facepaint pseudo 1`] = `
-.glamor-0 {
+.emotion-0 {
   background-color: hotpink;
   text-align: center;
   width: 25%;
 }
 
-.glamor-0:hover {
+.emotion-0:hover {
   width: 50%;
 }
 
-.glamor-0:active {
+.emotion-0:active {
   width: 75%;
 }
 
-.glamor-0:focus {
+.emotion-0:focus {
   width: 100%;
 }
 
-.glamor-0 .foo {
+.emotion-0 .foo {
   color: red;
 }
 
-.glamor-0 .foo:hover {
+.emotion-0 .foo:hover {
   color: green;
 }
 
-.glamor-0 .foo:active {
+.emotion-0 .foo:active {
   color: blue;
 }
 
-.glamor-0 .foo:focus {
+.emotion-0 .foo:focus {
   color: darkorchid;
 }
 
-.glamor-0 .foo img {
+.emotion-0 .foo img {
   height: 10px;
 }
 
-.glamor-0 .foo img:hover {
+.emotion-0 .foo img:hover {
   height: 15px;
 }
 
-.glamor-0 .foo img:active {
+.emotion-0 .foo img:active {
   height: 20px;
 }
 
-.glamor-0 .foo img:focus {
+.emotion-0 .foo img:focus {
   height: 25px;
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   <div
     className="foo"
@@ -892,24 +892,24 @@ exports[`facepaint pseudo 2`] = `
 `;
 
 exports[`facepaint repeating 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
 }
 
 @media (min-width:420px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
   }
 }
 
 @media (min-width:11200px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   Basic
 </div>
@@ -934,24 +934,24 @@ exports[`facepaint repeating 2`] = `
 `;
 
 exports[`facepaint undefined 1`] = `
-.glamor-0 {
+.emotion-0 {
   color: red;
 }
 
 @media (min-width:920px) {
-  .glamor-0 {
+  .emotion-0 {
     color: blue;
   }
 }
 
 @media (min-width:1120px) {
-  .glamor-0 {
+  .emotion-0 {
     color: darkorchid;
   }
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
 >
   Basic
 </div>
