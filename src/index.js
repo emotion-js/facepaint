@@ -56,7 +56,7 @@ export default function(breakpoints, { literal, overlap } = {}) {
     // Ensure that all slots and then child objects are pushed to the end
     mq.forEach(el => {
       if (slots[el]) {
-        props[el] = slots[el];
+        props[el] = slots[el]
       }
     })
     Object.assign(props, objects)
