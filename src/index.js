@@ -21,7 +21,7 @@ export default function(breakpoints, { literal, overlap } = {}) {
       let item = obj[key]
       if (!Array.isArray(item) && literal) item = [item]
 
-      if ((literal || Array.isArray(item)) && key.charCodeAt(0) !== 38) {
+      if (Array.isArray(item) && key.charCodeAt(0) !== 38) {
         let prior
         item.forEach((v, index) => {
           // Optimize by removing duplicated media query entries
